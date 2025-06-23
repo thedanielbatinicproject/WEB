@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Košarica</title>
+   
+</head>
+<body>
+    <div class="cart-container">
+        <div class="cart-header">
+            <h2>Moja Košarica</h2>
+        </div>
+
+        <div id="cart-items">
+            <% if (cartItems && cartItems.length > 0) { %>
+                <ul>
+                <% cartItems.forEach(function(item) { %>
+                    <li class="cart-item" data-id="<%= item.id %>">
+                        <img src="<%= item.image %>" alt="<%= item.name %>" class="cart-item-image">
+                        <span class="cart-item-name"><%= item.name %></span>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="updateQuantity('<%= item.id %>', -1)">−</button>
+                            <span class="quantity"><%= item.quantity %></span>
+                            <button class="quantity-btn" onclick="updateQuantity('<%= item.id %>', 1)">+</button>
+                        </div>
+                        <span class="cart-item-price">Cijena: <%= item.price %> €</span>
+                        <span class="cart-item-total">Ukupno: <%= (item.price * item.quantity).toFixed(2) %> €</span>
+                        <button class="remove-btn" onclick="removeItem('<%= item.id %>')">Ukloni</button>
+                    </li>
+                <% }); %>
+                </ul>
+            <% } else { %>
+                <div class="empty-cart" id="empty-cart-message">
+                    <p>Košarica je prazna!</p>
+                </div>
+            <% } %>
+        </div>
+
+        <div class="cart-footer">
+            <div><strong>Ukupno:</strong> <span id="total-price"><%= totalPrice %></span> €</div>
+            <button type="button" id="emptyCart" onclick="emptyCart()">Isprazni košaricu</button>
+        </div>
+    </div>
+    
+    <script src="/scripts/cart.js"></script>
+</body>
+</html>

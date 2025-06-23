@@ -1,0 +1,21 @@
+<div class="header">
+   <div class="logo">
+      <img src="/images/3sigma.png" alt="3Sigme Logo">
+   </div>
+   <% if (showBackButton) { %>
+      <a href="/" class="vrati-se-btn">Vraćanje na početnu stranicu</a>
+   <% } else { %>
+      <div class="trenutna-kategorija">Sve kategorije</div>
+   <% } %>
+   <div class="header-buttons">
+      <a href="/cart">
+         <div class="button kosarica-ikona">
+            🛒
+            <% if (!showBackButton) { %>
+               <div class="cart-quantity-circle" id="cartQuantity">0</div>
+            <% } %>
+         </div>
+      </a>
+      <div class="button search-ikona">🔍</div>
+   </div>
+</div>

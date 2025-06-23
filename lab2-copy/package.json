@@ -1,0 +1,23 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "2. laboratorijska vjezba za predmet WEB1 - FER",
+  "keywords": [
+    "web",
+    "server",
+    "labos"
+  ],
+  "license": "ISC",
+  "author": "Daniel Batinić",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1"
+  }
+}

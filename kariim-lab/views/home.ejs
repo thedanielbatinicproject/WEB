@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style2.css">
+    <title>Shoe store</title>
+</head>
+<body>
+    <div id="header">
+       <a href="#shopImage"> <div id="logo"><img id="logoslika" src="Pictures/logo.png"></div></a>
+        <div id="kategorija">
+            <h1 id="trenutnaKategorija">Yeezy</h1>
+            <div class="kategorija-dropdown" id="head-dropdown">
+                <div class="dropdown-item">Adidas</div>
+                <div class="dropdown-item">Yeezy</div>
+                <div class="dropdown-item">Nike</div>
+                <div class="dropdown-item">McQueen</div>
+                <div class="dropdown-item">New Balance</div>
+                <div class="dropdown-item">Off White</div>
+                <div class="dropdown-item">Hoka</div>
+                <div class="dropdown-item">Converse</div>
+                <div class="dropdown-item">Air Jordan</div>
+                <div class="dropdown-item">Loewe</div>
+            </div>
+        </div>
+        
+        <div id="searchCart"><input id="searchbar" type="text"><img id="search" src="Pictures/search.png"><a href="/cart"><div class="hasAfter"><img id="cart"  src="Pictures/shoppingcart.png"></div></a></div>
+    </div>
+
+
+    <div id="shopContainer"><img id="shopImage"><h2 id="shopText">NAJBOLJI IZBOR TENISICA U HRVATSKOJ</h2> <a href="#izbor"><button id="shopButton">PRETRAZI</button></a> </div>
+    
+
+    <div class="izbor" id="izbor"><h1>Naš izbor</h1></div>
+    <div class="category-dropdown">
+        <button id="dropdownBtn">Kategorije</button>
+        <div id="categories">
+            <h2 class="item">Adidas</h2>
+            <h2 class="item">Yeezy</h2>
+            <h2 class="item">Nike</h2>
+            <h2 class="item">McQueen</h2>
+            <h2 class="item">New Balance</h2>
+            <h2 class="item">Off White</h2>
+            <h2 class="item">Hoka</h2>
+            <h2 class="item">Converse</h2>
+            <h2 class="item">Air Jordan</h2>
+            <h2 class="item">Loewe</h2>
+        </div>
+    </div>
+
+    <h1 class="izbor" id="odabir">Yeezy</h1>
+    <div id="Katalog">
+            <!--<div class="proizvod"><img class="proizvodImage" src="Pictures/Yeezy/yeezy350 blackorange.jpg"><button class="addToCart" >Add to cart</button><p class="name">Yeezy 350 v2 Black Orange</p><h4 class="price"><s>(200€)</s> <strong>149.99€</strong></h4></div>-->
+    </div>
+
+    <div id="categoryDiv"></div>
+
+  
+    <div id="extras">
+        <img id="logoFooter" src="Pictures/logo.png"> 
+        <div id="contact">
+            <p>Kontakt</p>
+            <p>Newsletter</p>
+            <p>Pretplati se</p>
+        </div>
+    </div>
+<script src="./scripts/data.js"></script>
+<script src="./scripts/productFunctions.js"></script>
+<script src="./scripts/script.js"></script>
+
+</body>
+</html>

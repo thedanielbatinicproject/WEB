@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        
+        <link rel="stylesheet" href="/css/site.css">
+        <h1>Add todo...</h1>
+        <form action="/" method="post">
+            <select id="todos" name="cat">
+                <option value="work">Work</option>
+                <option value="mab">Movies and books</option>
+                <option value="fun">Fun</option>
+                <option value="sports">Sports</option>
+            </select>
+            <input type="text" name="con">
+            <input type="submit" value="Add todo">
+        </form>
+        <hr>
+        <h1>My todos:</h1>
+        <div id="main-wrapper">
+            <div id="work" class="todo-category">
+                <div class="todo-header"><b>Work</b> <span class="count"></span></div>
+                <div class="todo-list"></div>
+            </div>
+            <div id="mab" class="todo-category">
+                <div class="todo-header"><b>Movies and books</b> <span class="count"></span></div>
+                <div class="todo-list"></div>
+            </div>
+            <div id="fun" class="todo-category">
+                <div class="todo-header"><b>Fun</b> <span class="count"></span></div>
+                <div class="todo-list"></div>
+            </div>
+            <div id="sports" class="todo-category">
+                <div class="todo-header"><b>Sports</b> <span class="count"></span></div>
+                <div class="todo-list"></div>
+            </div>
+        </div>
+        <div class="footer">
+            My todos count: <span id="my-count" style="background: yellow; padding: 0 4px;"></span>, all todos count: <span id="all-count" style="background: yellow; padding: 0 4px;"></span>
+        </div>
+        <script src="/scripts/home.js"></script>
+    </body>
+
+</html>

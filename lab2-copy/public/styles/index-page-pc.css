@@ -1,0 +1,211 @@
+body {
+  display: grid;
+  grid-template-columns: 15vw 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1vw;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.product>img{
+  border-radius: 6%;
+}
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  padding: 0 2vw;
+  z-index: 1000;
+}
+.logo img {
+  height: 60px;
+  width: auto;
+}
+.trenutna-kategorija {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex: 1;
+  margin: 0 2vw;
+  text-shadow: 0.1vh 0.1vh 0.2vh rgba(0, 0, 0, 0.2);
+}
+.header-buttons {
+  display: flex;
+  gap: 1vw;
+  margin-right: 5vw;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2vw;
+  height: 2vw;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1vh;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.007);
+  box-shadow: 0 0.8vh 1.5vh rgba(0, 0, 0, 0.2);
+}
+.kosarica-ikona a, .search-ikona {
+  font-size: 1.3rem;
+  color: #007bff;
+  text-decoration: none;
+}
+.kosarica-ikona a:hover, .search-ikona:hover {
+  color: #0056b3;
+}
+.sidebar {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 15vw;
+  height: calc(100vh - 80px);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  z-index: 999;
+}
+.sidebar div {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+.sidebar div strong {
+  font-weight: bold;
+}
+.dropdown-btn {
+  display: none;
+}
+#closeCategories {
+  display: none;
+}
+.main-content {
+  margin-top: 7vh;
+  padding: 100px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 2vw;
+}
+.hero {
+  margin-top: 10vh;
+  text-align: bottom;
+  background: #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+.hero>img{
+  height: 70vh;
+  width: 100%;
+  object-fit:cover;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1vw;
+}
+.product {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+}
+.product>img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -0.5vh 1vh rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  margin-top: 2rem; /* Dodaje razmak između sadržaja i footera */
+  z-index: 1000; /* Osigurava da je footer iznad ostalog sadržaja */
+}
+.footer-button {
+  margin-right: 15vh;
+  margin-left: 10vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  text-align: center;
+}
+.footer-button:hover {
+  background: rgba(0, 123, 255, 0.8);
+  color: white;
+  transform: scale(1.007);
+}
+
+/* Stil stranice */
+/* Globalni stilovi */
+html, body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+ /* Plavkasta pozadina */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: #0056b3;
+ /* Tamnoplava za naslove */
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #0056b3;
+}
+/* Animacija fade-in za pozadinu */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/img/bg.jpg') repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 2s ease-in-out;
+  z-index: -1;
+}

@@ -1,0 +1,257 @@
+body {
+    padding-top: 22vh;
+}
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 180px;
+    justify-content: center;
+    padding: 2vh;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+.logo img {
+    height: 8vh;
+    width: auto;
+    margin-bottom: 1vh;
+}
+.trenutna-kategorija {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1vh;
+    text-shadow: 0.1vh 0.1vh 0.2vh rgba(0, 0, 0, 0.2);
+}
+.header-buttons {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    margin-top: 1vh;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8vw;
+    height: 8vw;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1vh;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+.kosarica-ikona a, .search-ikona {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+}
+.kosarica-ikona a:hover, .search-ikona:hover {
+    color: #0056b3;
+}
+.dropdown-btn {
+    display: block;
+   /* Osigurava da gumb zauzima cijeli red */
+    width: 90%;
+   /* Gumb zauzima 90% širine roditeljskog elementa */
+    max-width: 100%;
+   /* Sprječava prelazak izvan vidljivog dijela */
+    margin: 10px auto;
+    margin-top: 8vh;
+   /* Centriranje gumba horizontalno i dodavanje razmaka */
+    padding: 12px 20px;
+   /* Dodaje unutarnji razmak za bolji izgled */
+    background-color: #007bff;
+   /* Plava pozadina */
+    color: white;
+   /* Bijeli tekst */
+    border: none;
+   /* Uklanja rub */
+    cursor: pointer;
+   /* Pokazivač na ruku */
+    font-size: 1.2rem;
+   /* Povećava veličinu fonta */
+    font-weight: bold;
+   /* Podebljava tekst */
+    border-radius: 8px;
+   /* Zaobljeni rubovi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* Suptilna sjena */
+    transition: background 0.3s ease, transform 0.2s ease;
+   /* Animacija za hover */
+    text-align: center;
+   /* Centriranje teksta unutar gumba */
+}
+.dropdown-btn:hover {
+    background-color: #0056b3;
+   /* Tamnija plava na hover */
+    transform: scale(1.05);
+   /* Lagano povećanje na hover */
+}
+/* Glavni sadržaj */
+.main-content {
+    overflow: visible;
+   /* Osigurava da sadržaj ne uzrokuje dodatni scroll */
+    padding: 10px;
+    padding-top: 10vh;
+}
+.hero {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(55vw, 1fr));
+    gap: 2vw;
+}
+.product {
+    background: #fff;
+    padding: 2vh;
+    text-align: center;
+    border: 0.1vh solid #ddd;
+    border-radius: 1vh;
+    opacity: 0.9;
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
+}
+.product > img {
+    border-radius: 6%;
+}
+.categories-popup {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.97);
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s, transform 0.3s, visibility 0s linear 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.categories-popup.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s, transform 0.3s, visibility 0s linear 0s;
+}
+#top-margin{
+    margin-top: 1vh;
+}
+/* Gumbi za kategorije */
+.categories-popup .kategorije {
+    width: 50vw;
+   /* Gumbi zauzimaju 90% širine popup-a */
+    font-size: 1.2rem;
+   /* Povećava veličinu fonta */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+   /* Mutno staklo efekt */
+    backdrop-filter: blur(2px);
+   /* Dodaje zamućenje pozadine */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+   /* Suptilni rub */
+    border-radius: 12px;
+   /* Zaobljeni rubovi */
+    color: #333;
+   /* Tamniji tekst za kontrast */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+   /* Animacija za hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* Suptilna sjena */
+    margin: 0.2vh 0;
+   /* Razmak između gumba */
+    box-sizing: border-box;
+   /* Osigurava da padding ne utječe na širinu */
+}
+.sidebar {
+    padding: 0px;
+}
+/* Hover efekt za gumb */
+.categories-popup .kategorije:hover {
+    background: rgba(255, 255, 255, 0.4);
+   /* Svjetlija pozadina na hover */
+    transform: scale(1.05);
+   /* Lagano povećanje na hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+   /* Pojačana sjena na hover */
+    color: #007bff;
+   /* Plavi tekst na hover */
+}
+.categories-popup .close-btn {
+    position: static;
+   /* Uklanja fiksnu poziciju */
+    margin-top: 20px;
+   /* Dodaje razmak između kategorija i gumba */
+    align-self: center;
+   /* Centriranje gumba unutar popup-a */
+    width: 70px;
+    height: 70px;
+    background: #ff4d4d;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 200px;
+    margin-bottom: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.categories-popup .close-btn:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -0.5vh 1vh rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 2rem; /* Dodaje razmak između sadržaja i footera */
+  }
+  .footer-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    text-align: center;
+    width: 90%;
+  }
+  .footer-button:hover {
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    transform: scale(1.05);
+  }

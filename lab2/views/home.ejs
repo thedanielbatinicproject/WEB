@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>3Sigme - Auto Webshop</title>
+   <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+   <link rel="stylesheet" href="/styles/index-page.css">
+   <link rel="stylesheet" href="/styles/index-page-pc.css" media="screen and (min-width: 769px)">
+   <link rel="stylesheet" href="/styles/index-page-mob.css" media="screen and (max-width: 769px)">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <%- include('partials/header', { showBackButton: false }) %>
+
+   <div class="categories-dropdown">
+      <button class="dropdown-btn">Kategorije</button>
+      <div class="dropdown-content">
+         <div class="categories-popup sidebar" id="categoriesPopup">
+            <% categories.forEach(cat => { %>
+               <div class="kategorije" data-brand="<%= cat.name %>"><%= cat.name %></div>
+            <% }) %> 
+            <button class="close-btn" id="closeCategories">X</button>
+         </div>
+      </div>
+   </div>
+
+   <div class="main-content">
+      <div class="hero">
+         <div class="hero-text">DOBRODOŠLI NA AUTO TRGOVINU "3Sigme"</div>
+         <img src="/images/hero.png" alt="Hero Image">
+      </div>
+      <div class="products" id="products">
+         <!-- proizvodi će se dinamički puniti s JS-om -->
+      </div>
+      <button id="loadMoreBtn" style="display: none;">Učitaj još</button>
+   </div>
+
+   <%- include('partials/footer') %>
+
+   <script src="/scripts/home-page.js"></script>
+</body>
+</html>
