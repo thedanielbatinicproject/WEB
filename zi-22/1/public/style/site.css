@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
+.container > div {
+  background-color: #f1f1f1;
+  height: 250px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.category-title {
+  font-size: 20px;
+  padding: 0;
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+}
+
+.img {
+  width: 200px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: gray;
+}
+
+.img-div {
+  height: 150px;
+}

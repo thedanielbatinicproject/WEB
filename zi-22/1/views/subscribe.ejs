@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/style/site.css" />
+  </head>
+  <body>
+    <h1>Subscribe to <%= category %>!</h1>
+    <hr />
+
+    <form action="/subscribe/<%=category%>" method="post" class="form">
+      <label for="nick">Nick:</label><br />
+      <input type="text" id="nick" name="nick"/><br />
+      <label for="email">Email:</label><br />
+      <input type="text" id="email" name="email"/><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

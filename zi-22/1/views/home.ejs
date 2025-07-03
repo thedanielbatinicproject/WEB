@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/style/site.css" />
+  </head>
+  <body>
+    <h1>Please subscribe...</h1>
+    <hr />
+
+    <% const categories = ['Outdoors', 'Sports', 'Pizzas', 'Woks', 'Politics', 'Technology', 'Pets', 'BBQ']; %>
+
+    <div class="container">
+      <% categories.forEach(function(category) { 
+           const key = category.toLowerCase();
+           const count = subscribers[key] ? subscribers[key].length : 0;
+      %>
+        <div class="card">
+          <h4 class="category-title"><%= category %> (<%= count %>)</h4>
+          <div class="img-div">
+            <img src="/images/<%= category %>.jpg" class="img" />
+          </div>
+          <a href="/subscribe/<%= key %>">
+            <button type="button" class="button">Subscribe</button>
+          </a>
+        </div>
+      <% }); %>
+    </div>
+  </body>
+</html>
